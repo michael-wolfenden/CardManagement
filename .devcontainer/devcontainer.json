@@ -1,0 +1,22 @@
+{
+    "name": "Card Management",
+    "dockerComposeFile": [
+        // mongo container (services: mongo, mongo-express)
+        "../docker/docker-compose.yml",
+        // dotnet core 2.2 sdk container (services: dev-container)
+        "docker-compose.yml"
+    ],
+    // the service to work on
+    "service": "dev-container",
+    // workspace path within the container
+    "workspaceFolder": "/workspace",
+    // vscode extensions to install within the container
+    "extensions": [
+        // debugging support
+        "ms-vscode.csharp",
+        // f# support
+        "Ionide.Ionide-fsharp",
+        // SampleCalls.http support
+        "humao.rest-client"
+    ]
+}

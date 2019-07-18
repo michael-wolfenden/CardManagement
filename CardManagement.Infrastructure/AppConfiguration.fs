@@ -19,6 +19,7 @@ module AppConfiguration =
         ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", false, true)
+            .AddEnvironmentVariables()
             .Build()
 
     let [<Literal>] logFormat = "[{Timestamp:dd/MM/yy HH:mm:ss.fff} {Level:u3}] {Message:lj}{NewLine}{Exception}"
